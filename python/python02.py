@@ -99,6 +99,44 @@
             * 시작번호,끝번호 생략 > 처음부터 끝까지 추출 
 
 
+    i. 문자열 관련 함수
+        문자 개수 세기
+            a = "hobby"
+            a.count('b')
+            2
+
+        위치 알려주기(find)
+            a = "Python is best choice"
+            a.find('b')
+            10 (문자열에서 b가 처음나온 위치)
+            a.find('k')
+            -1 (존재하지 않으면 -1 반환)
+
+        위치 알려주기(index)
+            a = "Life is too short"
+            a.index('t')
+            8
+            a.index('k')
+            error   -> find는 존재하지 않는 문자 찾으면 -1 반환, index는 error
+
+    
+    j. 문자열 삽입
+        a = ","
+        a.join('abcd')
+        'a,b,c,d'
+
+    k. 공백 지우기
+        lstrip
+        rstrip
+        strip
+
+    
+    L. 문자열 나누기
+        a = "Life is too short"
+        a.split()
+        ['Life','is','too','short']
+
+
 
     
 
@@ -140,3 +178,24 @@ print("%-10sHi" %"hello")
 print("%0.4f" %1.23456789)
 # 총 10자리수, 소수점 네 번째 자리까지만 표기
 print("%10.4f" %1.23456789)
+
+
+# ex5)
+print("I eat {0} apples.".format(3))
+print("I eat 3 {0}.".format("apples"))
+print("I eat {0} {1}.".format(3,"apples"))
+
+# 문자열 왼쪽 정렬 + 10자리수
+print("{0:<10}".format("hi"))
+
+# 문자열 오른쪽 정렬 + 10자리수
+print("{0:>10}".format("hi"))
+
+# 문자열 가운데 정렬 + 10자리수
+print("{0:^10}".format("hi"))
+
+# 공백 채우기
+print("{0:=^10}".format("hi"))
+print("{0:=<10}".format("hi"))
+print("{0:=>10}".format("hi"))
+
